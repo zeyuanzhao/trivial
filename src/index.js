@@ -4,10 +4,10 @@
 (() => {
   let allPages = [];
   let allProblems = [];
-  $.getJSON("/data/allpages.json", (json) => {
+  $.getJSON("data/allpages.json", (json) => {
     allPages = json;
   });
-  $.getJSON("/data/allproblems.json", (json) => {
+  $.getJSON("data/allproblems.json", (json) => {
     allProblems = json;
   });
   let categoryPages = [];
@@ -264,7 +264,7 @@
         $("#dark-toggle").text("Light theme");
       } else {
         $("#stylesheet-link").after(
-          `<link id="dark-stylesheet-link" href="/src/dark.css" rel="stylesheet" />`
+          `<link id="dark-stylesheet-link" href="src/dark.css" rel="stylesheet" />`
         );
 
         localStorage.setItem("darkTheme", true);
